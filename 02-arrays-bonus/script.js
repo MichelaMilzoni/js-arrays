@@ -59,7 +59,36 @@ console.log(removedName);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
-const isFabioPresent = null;
+console.log(teachers);
+// creo variabile per la lista senza 'Ed'
+const isFabioPresent = []
+// ciclo for per inizializzare la variabile i che sia uguale a 0
+// i < teachers.length vuol dire che l'azione si ripete finchè la i non arriva alla lunghezza dell'array teacher(la deve scorrere tutta!!)
+// i++ vuol dire che a ogni giro del ciclo la i deve incrementarsi di 1
+for (let i = 0; i < teachers.length; i++) {
+  //ciclo IF per cecare tutti gli elementi della lista che sono 'Fabio'
+  if (teachers[i] === `Fabio`) {
+    // se la condizione di IF è vera, aggiungo alla fine (push) della nuova lista array isFabioPresent il valore trovato
+    isFabioPresent.push(teachers[i]);
+  }
+}
+console.log(isFabioPresent);
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
-const teachersString = null;
+console.log(teachers);
+// creo variabile per la lista senza 'string'
+let string = "";
+// ciclo for per inizializzare la variabile i che sia uguale a 0
+// i < teachers.length vuol dire che l'azione si ripete finchè la i non arriva alla lunghezza dell'array teacher(la deve scorrere tutta!!)
+// i++ vuol dire che a ogni giro del ciclo la i deve incrementarsi di 1
+for (let i = 0; i < teachers.length; i++) {
+  //ciclo IF per spostare ogni elemento nella nuova lista seguito da virgola
+  if (i === teachers.length - 1) {
+    // se la condizione di IF è vera, aggiungo alla fine (push) della nuova lista array string il valore trovato senza virgola
+    string.push += teachers[i];
+    // altrimenti aggiungo il valore trovato senza virgola
+  } else {
+    string.push += teachers[i] + ", ";
+  }
+}
+console.log(string);
